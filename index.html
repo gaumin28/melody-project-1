@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Melody</title>
+</head>
+
+<body class="flex w-7/8 min-h-screen ml-auto mr-auto">
+    <!-- sidebar -->
+    <div class="side-bar bg-[#0E1920] text-white w-64 h-screen p-6 flex flex-col space-y-6">
+        <h1 class="text-2xl font-extrabold text-blue-300">Melodies</h1>
+        <!-- menu -->
+        <div>
+            <h2 class="text-sm text-pink-400 mb-2">Menu</h2>
+            <ul class="space-y-2">
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🏠</span>Home</a></li>
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🔍</span>Discover</a></li>
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>📀</span>Albums</a></li>
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🎤</span>Artists</a></li>
+            </ul>
+        </div>
+        <!-- Library -->
+        <div>
+            <h2 class="text-sm text-pink-400 mb-2">Library</h2>
+            <ul class="space-y-2">
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🕒</span>Recently Added</a></li>
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>🔥</span>Most played</a></li>
+            </ul>
+        </div>
+        <!-- Playlist and favorite -->
+        <div>
+            <h2 class="text-sm text-pink-400 mb-2">Playlist and favorite</h2>
+            <ul class="space-y-2">
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>❤️</span>Your favorites</a></li>
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>📃</span>Your playlist</a></li>
+                <li class="hover:bg-pink-500 hover:text-white rounded-[10px] pl-2 text-blue-300"><a href="#"><img
+                            class="w-4 inline-block mr-1" src="./IMG/add-playlist.png">Add playlist</a></li>
+            </ul>
+        </div>
+        <!-- general -->
+        <div>
+            <h2 class="text-sm text-pink-400 mb-2">General</h2>
+            <ul class="space-y-2">
+                <li class="hover:bg-pink-500 rounded-[10px] pl-2"><a href="#"><span>⚙️</span>Setting</a></li>
+                <li class="hover:bg-pink-500 hover:text-white rounded-[10px] pl-2 text-pink-400"><a href="#"><img
+                            class="w-4 inline-block mr-1" src="./IMG/log-out.png">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div></div>
+    <!-- content -->
+    <div class="flex-1 bg-[#412c3a] w-6xl p-6">
+        <nav class="flex items-center justify-between pt-9 pb-2 sticky top-[-28px] mb-10">
+            <div class="relative">
+                <span class="absolute inset-y-0 left-9 flex items-center"><a href="#"><img
+                            src="./IMG/search.png"></a></span>
+                <input class="w-[360px] bg-[#656565] px-8 py-2 rounded-lg text-gray-200 ml-8" type="text"
+                    placeholder="Search For Musics, Artists, Albums">
+            </div>
+            <div>
+                <ul class="flex">
+                    <li><a class="px-5 py-2 text-white" href="#">About</a></li>
+                    <li><a class="px-5 py-2 text-white" href="#">Contact</a></li>
+                    <li><a class="px-5 py-2 text-white" href="#">Premium</a></li>
+                </ul>
+            </div>
+            <div class="flex gap-4 mr-10">
+                <a href="#"
+                    class="bg-black hover:bg-pink-600 hover:text-black px-5 py-2 rounded-full text-pink-400 font-bold min-w-[120px] text-center">Login</a>
+                <a href="#"
+                    class="border border-white text-black bg-pink-500 hover:bg-black hover:text-pink-400 px-5 py-2 rounded-full font-bold min-w-[120px] text-center">Sign
+                    Up</a>
+            </div>
+        </nav>
+        <!-- banner -->
+        <div class="relative overflow-hidden rounded-2xl shadow-lg ml-20 mr-20">
+            <!-- Carousel Container -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
+
+                <!-- Slide 1 -->
+                <div id="slide-1"
+                    class="flex-shrink-0 w-full flex text-white snap-start bg-[url('./IMG/Billie-Eilish.jpg')] h-96 opacity-70">
+                    <div class="w-1/4 p-8 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-3">Billie Eilish</h2>
+                        <p class="text-gray-300 mb-5">
+                            You can have easy access to every song of Billie Eilish by clicking
+                            <span class="text-pink-400 font-semibold">Listen Now</span>.
+                            You can also <span class="text-sky-400 font-semibold">Follow</span> her to keep up with new
+                            releases.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="bg-pink-500 hover:bg-pink-600 px-5 py-2 rounded-lg text-white font-semibold">Listen
+                                Now</a>
+                            <a href="#"
+                                class="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white px-5 py-2 rounded-lg font-semibold">Follow</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div id="slide-2"
+                    class="flex-shrink-0 w-full flex text-white snap-start bg-[url('./IMG/Billie-Eilish.jpg')] h-96 opacity-70">
+                    <div class="w-1/4 p-8 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-3">Billie Eilish</h2>
+                        <p class="text-gray-300 mb-5">
+                            You can have easy access to every song of Billie Eilish by clicking
+                            <span class="text-pink-400 font-semibold">Listen Now</span>.
+                            You can also <span class="text-sky-400 font-semibold">Follow</span> her to keep up with new
+                            releases.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="bg-pink-500 hover:bg-pink-600 px-5 py-2 rounded-lg text-white font-semibold">Listen
+                                Now</a>
+                            <a href="#"
+                                class="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white px-5 py-2 rounded-lg font-semibold">Follow</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div id="slide-3"
+                    class="flex-shrink-0 w-full flex text-white snap-start bg-[url('./IMG/Billie-Eilish.jpg')] h-96 opacity-70">
+                    <div class="w-1/4 p-8 flex flex-col justify-center">
+                        <h2 class="text-2xl font-bold mb-3">Billie Eilish</h2>
+                        <p class="text-gray-300 mb-5">
+                            You can have easy access to every song of Billie Eilish by clicking
+                            <span class="text-pink-400 font-semibold">Listen Now</span>.
+                            You can also <span class="text-sky-400 font-semibold">Follow</span> her to keep up with new
+                            releases.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="bg-pink-500 hover:bg-pink-600 px-5 py-2 rounded-lg text-white font-semibold">Listen
+                                Now</a>
+                            <a href="#"
+                                class="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white px-5 py-2 rounded-lg font-semibold">Follow</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
+                <a href="#slide-1" class="w-3 h-3 bg-pink-500 rounded-full block hover:scale-125 transition"></a>
+                <a href="#slide-2" class="w-3 h-3 bg-gray-400 rounded-full block hover:scale-125 transition"></a>
+                <a href="#slide-3" class="w-3 h-3 bg-gray-400 rounded-full block hover:scale-125 transition"></a>
+            </div>
+        </div>
+        <!-- Weekly Top Songs -->
+        <div class="w-[1061px] mt-10 ml-10">
+            <h2 class="text-2xl font-bold">Weekly Top <span class="text-pink-400">Songs</span></h2>
+            <!-- song list -->
+            <div class="flex gap-4 mt-10">
+                <a href="#"><img src="./IMG/Group 24.png" alt="Whatever it takes"></a>
+                <a href="#"><img src="./IMG/Group 26.png" alt="Skyfall"></a>
+                <a href="#"><img src="./IMG/Group 28.png" alt="Superman"></a>
+                <a href="#"><img src="./IMG/Group 30.png" alt="Softcore"></a>
+                <a href="#"><img src="./IMG/Group 32.png" alt="Lonliest"></a>
+                <div class="self-center">
+                    <img src="./IMG/Group 21.png" alt="add more">
+                    <a class="text-white" href="#">View All</a>
+                </div>
+            </div>
+        </div>
+        <!-- New Release Songs -->
+        <div class="w-[1061px] mt-10 ml-10">
+            <h2 class="text-2xl font-bold">New Release <span class="text-pink-400">Songs</span></h2>
+            <!-- song list -->
+            <div class="flex gap-4 mt-10">
+                <a href="#"><img src="./IMG/Group 24-1.png" alt="Time"></a>
+                <a href="#"><img src="./IMG/Group 26-1.png" alt="112"></a>
+                <a href="#"><img src="./IMG/Group 28-1.png" alt="We don't care"></a>
+                <a href="#"><img src="./IMG/Group 30-1.png" alt="Who I am"></a>
+                <a href="#"><img src="./IMG/Group 32-1.png" alt="Baixo"></a>
+                <div class="self-center">
+                    <img src="./IMG/Group 21.png" alt="add more">
+                    <a class="text-white" href="#">View All</a>
+                </div>
+            </div>
+        </div>
+        <!-- Top trending -->
+        <div class="w-[1061px] mt-10 ml-10">
+            <h2 class="text-2xl font-bold mb-2">Trending <span class="text-pink-400">Songs</span></h2>
+            <div class="flex justify-between text-white">
+                <span></span>
+                <span class="pl-2">Release Date</span>
+                <span>Album</span>
+                <span class="pr-5">Time</span>
+            </div>
+            <!-- song list -->
+             <!-- #1 -->
+            <div class="flex justify-between h-15 mt-2 bg-black rounded-md">
+                <div class="flex text-white gap-2 w-1/4 pl-3">
+                    <span class="self-center">#1</span>
+                    <img src="./IMG/Softcore.png" alt="Softcore">
+                    <div class="flex self-center flex-col">
+                        <h3 class="font-bold">Softcore</h3>
+                        <p class="text-xs font-thin opacity-70">The neighberhood</p>
+                    </div>
+                </div>
+                <div class="self-center w-1/4 pl-6">
+                    <span class="text-gray-300">Nov 4, 2023</span>
+                </div>
+                <div class="self-center">
+                    <span class="text-gray-300 w-auto pr-10">Hard to Imagine the Neighbourhood Ever Changing</span>
+                </div>
+                <div class="self-center">
+                    <div class="flex gap-2 px-5">
+                        <img src="./IMG/heart.png" alt="heart">
+                        <span class="text-white">3:26</span>
+                    </div>
+                </div>
+            </div>
+            <!-- #2 -->
+             <div class="flex relative justify-between h-15 mt-2 bg-black rounded-md">
+                <div class="flex text-white gap-2 pl-3">
+                    <span class="self-center">#2</span>
+                    <img src="./IMG/Skyfall.png" alt="Skyfall">
+                    <div class="flex self-center flex-col">
+                        <h3 class="font-bold">Skyfall Beats</h3>
+                        <p class="text-xs font-thin opacity-70">Nightmare</p>
+                    </div>
+                </div>
+                <div class="absolute self-center left-75">
+                    <span class="text-gray-300 inline-block">Oct 26, 2023</span>
+                </div>
+                <div class="self-center">
+                    <span class="text-gray-300 inline-block w-auto pl-60">Nightmare</span>
+                </div>
+                <div class="self-center">
+                    <div class="flex gap-2 px-5">
+                        <img src="./IMG/heart.png" alt="heart">
+                        <span class="text-white">2:45</span>
+                    </div>
+                </div>
+            </div>
+            <!-- #3 -->
+            <div class="flex relative justify-between h-15 mt-2 bg-black rounded-md">
+                <div class="flex text-white gap-2 pl-3">
+                    <span class="self-center">#3</span>
+                    <img src="./IMG/Greedy.png" alt="Greedy">
+                    <div class="flex self-center flex-col">
+                        <h3 class="font-bold">Greedy</h3>
+                        <p class="text-xs font-thin opacity-70">tate mcrae</p>
+                    </div>
+                </div>
+                <div class="absolute self-center left-75">
+                    <span class="text-gray-300">Dec 30, 2023</span>
+                </div>
+                <div class="self-center">
+                    <span class="text-gray-300 inline-block w-auto pl-70">Greedy</span>
+                </div>
+                <div class="self-center">
+                    <div class="flex gap-2 px-5">
+                        <img src="./IMG/heart.png" alt="heart">
+                        <span class="text-white">2:11</span>
+                    </div>
+                </div>
+            </div>
+            <!-- #4 -->
+             <div class="flex relative justify-between h-15 mt-2 bg-black rounded-md">
+                <div class="flex text-white gap-2 pl-3">
+                    <span class="self-center">#4</span>
+                    <img src="./IMG/Loving-me.png" alt="Lovin On me">
+                    <div class="flex self-center flex-col">
+                        <h3 class="font-bold">Lovin On me</h3>
+                        <p class="text-xs font-thin opacity-70"> jack harlow</p>
+                    </div>
+                </div>
+                <div class="absolute self-center left-75">
+                    <span class="text-gray-300">Dec 30, 2023</span>
+                </div>
+                <div class="self-center">
+                    <span class="text-gray-300 inline-block w-auto pl-60">Lovin On me</span>
+                </div>
+                <div class="self-center">
+                    <div class="flex gap-2 px-5">
+                        <img src="./IMG/heart.png" alt="heart">
+                        <span class="text-white">2:18</span>
+                    </div>
+                </div>
+            </div>
+            <!-- #5 -->
+             <div class="flex relative justify-between h-15 mt-2 bg-black rounded-md">
+                <div class="flex text-white gap-2 pl-3">
+                    <span class="self-center">#5</span>
+                    <img src="./IMG/pain-on-town.png" alt="paint the town red">
+                    <div class="flex self-center flex-col">
+                        <h3 class="font-bold">Paint the town red</h3>
+                        <p class="text-xs font-thin opacity-70">Doja Cat</p>
+                    </div>
+                </div>
+                <div class="absolute self-center left-75">
+                    <span class="text-gray-300">Dec 29, 2023</span>
+                </div>
+                <div class="self-center">
+                    <span class="text-gray-300 inline-block w-auto pl-50">Paint The Town Red</span>
+                </div>
+                <div class="self-center">
+                    <div class="flex gap-2 px-5">
+                        <img src="./IMG/heart.png" alt="heart">
+                        <span class="text-white">3:51</span>
+                    </div>
+                </div>
+            </div>
+            <!-- #6 -->
+             <div class="flex relative justify-between h-15 mt-2 bg-black rounded-md">
+                <div class="flex text-white gap-2 pl-3">
+                    <span class="self-center">#6</span>
+                    <img src="./IMG/dancing.png" alt="Dancin On Night">
+                    <div class="flex self-center flex-col">
+                        <h3 class="font-bold">Dancin On Night</h3>
+                        <p class="text-xs font-thin opacity-70">Dualipa</p>
+                    </div>
+                </div>
+                <div class="absolute self-center left-75">
+                    <span class="text-gray-300">May 27, 2023</span>
+                </div>
+                <div class="self-center">
+                    <span class="text-gray-300 inline-block w-auto pl-60">Dance The Night(From Barbie Movie)</span>
+                </div>
+                <div class="self-center">
+                    <div class="flex gap-2 px-5">
+                        <img src="./IMG/heart.png" alt="heart">
+                        <span class="text-white">2:56</span>
+                    </div>
+                </div>
+            </div>
+            <!-- #7 -->
+             <div class="flex relative justify-between h-15 mt-2 bg-black rounded-md">
+                <div class="flex text-white gap-2 pl-3">
+                    <span class="self-center">#7</span>
+                    <img src="./IMG/water.png" alt="Water">
+                    <div class="flex self-center flex-col">
+                        <h3 class="font-bold">Water</h3>
+                        <p class="text-xs font-thin opacity-70">Tyla</p>
+                    </div>
+                </div>
+                <div class="absolute self-center left-75">
+                    <span class="text-gray-300">Dec 10, 2023</span>
+                </div>
+                <div class="self-center">
+                    <span class="text-gray-300 inline-block w-64 pl-60">Water</span>
+                </div>
+                <div class="self-center">
+                    <div class="flex gap-2 px-5">
+                        <img src="./IMG/heart.png" alt="heart">
+                        <span class="text-white">3:20</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
